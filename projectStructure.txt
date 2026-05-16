@@ -1,0 +1,84 @@
+DynamicRandomExpanderGenerator/
+├── Project.toml
+├── Manifest.toml
+├── src/
+│   │
+│   ├── DynamicRandomExpanderGenerator.jl  # File principale del modulo
+│   │
+│   ├── models/                          
+│   │   ├── eraes.jl                     # Logica specifica del modello E-RAES
+│   │   ├── vraes.jl                     # Logica specifica del modello V-RAES
+│   │   ├── evraes.jl                    # Logica specifica del modello EV-RAES
+│   │   ├── plaw_eraes.jl                # Logica specifica del modello E-RAES con Power Law
+│   │   ├── plaw_vraes.jl                # Logica specifica del modello V-RAES con Power Law
+│   │   └── plaw_evraes.jl               # Logica specifica del modello EV-RAES con Power Law           
+│   │
+│   ├── analysis/                        
+│   │   ├── spectral.jl                  # Funzioni per il calcolo dello spectral gap
+│   │   ├── general.jl                   # Funzioni generiche utilizzate nelle analisi
+│   │   └── eraes_specific.jl            # Funzioni di analisi specifiche per E-RAES
+│   │
+│   ├── flooding/                        
+│   │    └── flooding.jl 
+│   │
+│   └── utils/
+│       ├── plotting.jl                             
+│       ├── math.jl
+│       └── graphs.jl                   
+│   
+├── scripts/                    # Scripts di debugging            
+│   ├── run_eraes.jl
+│   ├── run_vraes.jl
+│   ├── run_evraes.jl
+│   ├── run_plaw_eraes.jl
+│   ├── run_plaw_vraes.jl
+│   ├── run_plaw_evraes.jl
+│   ├── run_spectral_gap_comparison.jl
+│   ├── run_general_analysis.jl
+│   ├── debug_eraes.jl
+│   └── run_flooding.jl 
+│
+├── experiments/        # Esperimenti 
+│    └── eraes/
+│           ├── run_spectral_gap_convergence_eraes.jl
+│           ├── average_spectral_gap_eraes.jl
+│           ├── average_spectral_gap_eraes_fixed_rounds.jl
+│           ├── flooding_time_eraes.jl
+│           ├── precompute_stability_eraes.jl
+│           └── plots_eraes/
+│               ├── plot_average_spectral_gap_eraes.jl
+│               ├── plot_flooding_time_eraes.jl
+│               └── plot_spectral_gap_convergence_eraes.jl
+│
+│
+├── results/        
+│    └── eraes_classical/
+│           ├── average_flooding_time_eraes_c15.csv             # Output di flooding_time_eraes.jl con c=1.5
+│           ├── average_flooding_time_eraes_main.csv            # Output di flooding_time_eraes.jl con c=3
+│           ├── average_spectral_gap_eraes_fixed_c3.csv         # Output di average_spectral_gap_eraes_fixed_rounds.jl con c=3
+│           ├── average_spectral_gap_eraes_fixed_c15.csv        # Output di average_spectral_gap_eraes_fixed_rounds.jl con c=1.5
+│           ├── average_spectral_gap_eraes_main_small_c.csv     # Output di average_spectral_gap_eraes.jl con c=1.5
+│           ├── average_spectral_gap_eraes_main.csv             # Output di average_spectral_gap_eraes.jl con c=3
+│           ├── spectral_gaps_convergence_eraes_2.csv           # Output di run_spectral_gap_convergence_eraes.jl con c=1.5
+│           ├── spectral_gaps_convergence_eraes_main.csv        # Output di run_spectral_gap_convergence_eraes.jl con c=3
+│           ├── stabilization_epsilon.csv                       # Output di precompute_stability_eraes.jl con c=3
+│           ├── stabilization_t0.csv                            # Output di precompute_stability_eraes.jl con c=3
+│           ├── stabilization_t0_c15.csv                        # Output di precompute_stability_eraes.jl con c=1.5
+│           ├── stabilization_epsilon_c15.csv                   # Output di precompute_stability_eraes.jl con c=3
+│           └── imgs/
+│               ├── average_flooding_time_eraes_c15.png
+│               ├── average_flooding_time_eraes_main.png
+│               ├── average_spectral_gap_eraes_fixed_c3.png
+│               ├── average_spectral_gap_eraes_fixed_c15.png
+│               ├── average_spectral_gap_eraes_main_small_c.png
+│               ├── average_spectral_gap_eraes_main.png
+│               ├── spectral_gaps_convergence_eraes_2.png
+│               └── spectral_gaps_convergence_eraes_main.png
+│
+└──notebooks/                               
+    └── notebook.ipynb
+
+
+
+
+
